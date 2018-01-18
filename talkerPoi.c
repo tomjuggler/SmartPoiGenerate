@@ -14,6 +14,7 @@ typedef unsigned char byte;
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <time.h>
+#include<math.h>
 
 #define SERVERPORT "2390"    // the port users will be connecting to
 #define CLIENTPORT "2390"
@@ -147,21 +148,49 @@ for(int i = 0; i < 36; i++){
    }
   }
 
-// for(int i = 2; i < 16; i+=2){
-//    DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
-//    DrawColouredCircle(i, i, i, 0, 0, 255);
-// }
+for(int i = 2; i < 16; i+=2){
+   DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
+   DrawColouredCircle(i, i, i, 0, 0, 255);
+}
 
 //triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
-int rows = 36;
-for(int i = 1; i <= rows; i++) {
-  /* Prints one row of triangle */
-  for(int j = 1; j <= i; ++j) {
-     DrawPixel(j, i, 255, 0, 0);
-  }
-  /* move to next row */
- //
-}
+// int rows = 36;
+// for(int i = 1; i <= rows; i++) {
+//   /* Prints one row of triangle */
+//   for(int j = 1; j <= i; ++j) {
+//      DrawPixel(j, i, 255, 0, 0);
+//   }
+//   /* move to next row */
+//  //
+// }
+
+//rhombus from : http://www.techcrashcourse.com/2016/01/print-rhombus-star-pattern-in-c.html
+// int rows = 20;
+// for(int i = 1; i <= rows; i++) {  
+//   /* Print spaces before stars in a row */ 
+//   for(int j=i; j<rows; j++) {  
+//     DrawPixel(j, i, 0, 0, 0); 
+//   }  
+
+//   /* Print rows stars after spaces in a row */ 
+//   for(int j = 1; j <= rows; j++) {  
+//     DrawPixel(j, i, 255, 0, 255);  
+//   }  
+
+//   /* jump to next row */ 
+//   //  
+// }  
+
+//exponential from: http://www.techcrashcourse.com/2016/01/exponentially-increasing-star-pattern-in-c.html
+// int i,j;
+// int rows = 6; 
+// for(i = 0; i < rows; i++){
+//  /* Prints one row of pattern */
+//    for(j = 0; j < pow(2,i); j++){
+//     DrawPixel(j, i, 0, 255, 255);
+//    }
+//    /* move to next row */
+// }
 
 for(int z = 0; z < 5000; z++){ //send multiple times
 
