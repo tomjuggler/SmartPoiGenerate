@@ -148,21 +148,21 @@ for(int i = 0; i < 36; i++){
    }
   }
 
-for(int i = 2; i < 16; i+=2){
-   DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
-   DrawColouredCircle(i, i, i, 0, 0, 255);
-}
+// for(int i = 2; i < 16; i+=2){
+//    DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
+//    DrawColouredCircle(i, i, i, 0, 0, 255);
+// }
 
 //triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
-// int rows = 36;
-// for(int i = 1; i <= rows; i++) {
-//   /* Prints one row of triangle */
-//   for(int j = 1; j <= i; ++j) {
-//      DrawPixel(j, i, 255, 0, 0);
-//   }
-//   /* move to next row */
-//  //
-// }
+int rows = 36;
+for(int i = 1; i <= rows; i++) {
+  /* Prints one row of triangle */
+  for(int j = 1; j <= i; ++j) {
+     DrawPixel(j, i, 255, 0, 0);
+  }
+  /* move to next row */
+ //
+}
 
 //rhombus from : http://www.techcrashcourse.com/2016/01/print-rhombus-star-pattern-in-c.html
 // int rows = 20;
