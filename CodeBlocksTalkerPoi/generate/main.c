@@ -192,7 +192,7 @@ for(int i = 1; i <= rows; i++) {
 //    /* move to next row */
 // }
 
-for(int z = 0; z < 5000; z++){ //send multiple times
+for(int z = 0; z < 10; z++){ //send multiple times
 
 
 counter = 0;
@@ -231,7 +231,7 @@ int c = 1, d = 1;
 freeaddrinfo(servinfo);
     //printf("talker: sent %d bytes to %s\n", numbytes, argv[1]);
     close(sockfd);
-
+    printf("finished");
     return 0;
 }
 

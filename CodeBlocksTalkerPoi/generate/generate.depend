@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1531518574 source:/home/tom/Documents/PROGRAMMING/c/SmartPoiGenerate/CodeBlocksTalkerPoi/generate/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<errno.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<time.h>
+	<math.h>
+
