@@ -148,21 +148,36 @@ for(int i = 0; i < 36; i++){
    }
   }
 
-// for(int i = 2; i < 16; i+=2){
+//set all pixels to 255:
+//for(int i = 0; i < 36; i++){
+//  for(int j = 0; j < 36; j++){
+    // drawPixel(i, j, 0, 0, 0)
+//     x_array[i][j] = 255;
+//   }
+//  }
+
+//for(int i = 14; i < 16; i+=2){
 //    DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
-//    DrawColouredCircle(i, i, i, 0, 0, 255);
+//   DrawColouredCircle(i, i, i, 255, 255, 255);
 // }
+
+//DrawColouredSquare(2, 2, 16, 255, 255, 255);
 
 //triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
 int rows = 36;
 for(int i = 1; i <= rows; i++) {
   /* Prints one row of triangle */
   for(int j = 1; j <= i; ++j) {
-     DrawPixel(j, i, 255, 0, 0);
+     DrawPixel(j, i, 0, 0, 255);
   }
   /* move to next row */
  //
 }
+
+
+
+
+
 
 //rhombus from : http://www.techcrashcourse.com/2016/01/print-rhombus-star-pattern-in-c.html
 // int rows = 20;
@@ -192,7 +207,7 @@ for(int i = 1; i <= rows; i++) {
 //    /* move to next row */
 // }
 
-for(int z = 0; z < 10; z++){ //send multiple times
+for(int z = 0; z < 5000; z++){ //send multiple times
 
 
 counter = 0;
@@ -220,7 +235,7 @@ rgbArray[j] = x_array[i][j]+127;
 //simulated delay:
 int c = 1, d = 1;
 
-   for ( c = 1 ; c <= 1000 ; c++ )
+   for ( c = 1 ; c <= 10000 ; c++ )
        for ( d = 1 ; d <= 1500 ; d++ )
        {}
    }
@@ -231,7 +246,7 @@ int c = 1, d = 1;
 freeaddrinfo(servinfo);
     //printf("talker: sent %d bytes to %s\n", numbytes, argv[1]);
     close(sockfd);
-    printf("finished");
+
     return 0;
 }
 
