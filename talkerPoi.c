@@ -148,17 +148,27 @@ for(int i = 0; i < 36; i++){
    }
   }
 
-// for(int i = 2; i < 16; i+=2){
-//    DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
-//    DrawColouredCircle(i, i, i, 0, 0, 255);
-// }
+//set all pixels to 255: 
+//for(int i = 0; i < 36; i++){
+//  for(int j = 0; j < 36; j++){
+    // drawPixel(i, j, 0, 0, 0)
+//     x_array[i][j] = 255;
+//   }
+//  }
+
+for(int i = 14; i < 16; i+=2){
+    DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
+   DrawColouredCircle(i, i, i, 255, 255, 255);
+ }
+
+//DrawColouredSquare(2, 2, 16, 255, 255, 255);
 
 //triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
 int rows = 36;
 for(int i = 1; i <= rows; i++) {
   /* Prints one row of triangle */
   for(int j = 1; j <= i; ++j) {
-     DrawPixel(j, i, 255, 0, 0);
+     DrawPixel(j, i, 0, 0, 255);
   }
   /* move to next row */
  //
