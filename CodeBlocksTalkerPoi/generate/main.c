@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
         switch(counter)
         {
         case 0:
-            //triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
+            //Right angle triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
             rows = 36;
             for(int i = 0; i < rows; i++)
             {
@@ -112,53 +112,73 @@ int main(int argc, char *argv[])
             counter++;
             break;
         case 1:
-            for(int i = 14; i < 16; i+=2)
+            for(int i = 17; i < 19; i+=2)
             {
-                DrawColouredSquare(i+2, i+2, i+2, 0, 255, 0);
-//    DrawColouredCircle(i, i, i, 255, 255, 255);
+                DrawColouredSquare(i, i, i, 0, 255, 0);
+                DrawColouredCircle(i, i, i, 255, 255, 0);
             }
             counter++;
             break;
-        case 2:
-            for(int i = 14; i < 16; i+=2)
-            {
-//      DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
-                DrawColouredCircle(i, i, i, 0, 0, 255);
-            }
-            counter++;
-            break;
-        case 3:
-//    exponential from: http://www.techcrashcourse.com/2016/01/exponentially-increasing-star-pattern-in-c.html
-            rows = 6;
+//        case 2:
+//            for(int i = 14; i < 16; i+=2)
+//            {
+////      DrawColouredSquare(i+2, i+2, i+2, 255, 255, 0);
+//                DrawColouredCircle(i, i, i, 0, 0, 255);
+//            }
+//            counter++;
+//            break;
+//        case 3:
+////    exponential from: http://www.techcrashcourse.com/2016/01/exponentially-increasing-star-pattern-in-c.html
+//            rows = 6;
+//            for(int i = 0; i < rows; i++)
+//            {
+////   Prints one row of pattern
+//                for(int j = 0; j < pow(2,i); j++)
+//                {
+//                    DrawPixel(j, i, 255, 255, 255);
+//                }
+////     move to next row
+//            }
+//            counter++;
+//            break;
+//        case 3:
+////    rhombus from : http://www.techcrashcourse.com/2016/01/print-rhombus-star-pattern-in-c.html
+//            rows = 20;
+//            for(int i = 1; i <= rows; i++)
+//            {
+////    Print spaces before stars in a row
+//                for(int j=i; j<rows; j++)
+//                {
+//                    DrawPixel(j, i, 0, 0, 0);
+//                }
+////    Print rows stars after spaces in a row
+//                for(int j = 1; j <= rows; j++)
+//                {
+//                    DrawPixel(j, i, 255, 0, 255);
+//                }
+////    jump to next row
+//            }
+//            counter=0;
+//            break;
+        case 2: //Right andgle Triangle other way
+            rows = 36;
             for(int i = 0; i < rows; i++)
             {
-//   Prints one row of pattern
-                for(int j = 0; j < pow(2,i); j++)
+//       Prints one row of triangle
+                for(int j = 0; j < rows; j++)
                 {
-                    DrawPixel(j, i, 255, 255, 255);
+                    if(j>rows-i)
+                    {
+                        DrawPixel(j, i, 0, 0, 0);
+                    }
+                    else
+                    {
+                        DrawPixel(j, i, 255, 0, 0);
+                    }
                 }
-//     move to next row
+//       move to next row
             }
-            counter++;
-            break;
-        case 4:
-//    rhombus from : http://www.techcrashcourse.com/2016/01/print-rhombus-star-pattern-in-c.html
-            rows = 20;
-            for(int i = 1; i <= rows; i++)
-            {
-//    Print spaces before stars in a row
-                for(int j=i; j<rows; j++)
-                {
-                    DrawPixel(j, i, 0, 0, 0);
-                }
-//    Print rows stars after spaces in a row
-                for(int j = 1; j <= rows; j++)
-                {
-                    DrawPixel(j, i, 255, 0, 255);
-                }
-//    jump to next row
-            }
-            counter = 0;
+            counter=0;
             break;
         default:
             counter = 0;
@@ -184,7 +204,7 @@ int main(int argc, char *argv[])
 //simulated delay:
             int c = 1, d = 1;
 
-            for ( c = 1 ; c <= 10000 ; c++ )
+            for ( c = 1 ; c <= 4000 ; c++ )
                 for ( d = 1 ; d <= 1500 ; d++ )
                 {}
         }
