@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
 //       Prints one row of triangle
                 for(int j = 0; j < i; ++j)
                 {
-                    DrawPixel(j, i, 255, 0, 0);
+                    DrawPixel(j, i, i*7, 0, 255-i*7);
                 }
 //       move to next row
             }
@@ -114,8 +114,8 @@ int main(int argc, char *argv[])
         case 1:
             for(int i = 17; i < 19; i+=2)
             {
-                DrawColouredSquare(i, i, i, 0, 255, 0);
-                DrawColouredCircle(i, i, i, 255, 255, 0);
+                DrawColouredSquare(i, i, i, 255-i*7, 0, i*7);
+                DrawColouredCircle(i, i, i, i*7, 0, 255-i*7);
             }
             counter++;
             break;
@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
                     }
                     else
                     {
-                        DrawPixel(j, i, 255, 0, 0);
+                        DrawPixel(j, i, i*7, 0, 255-i*7);
                     }
                 }
 //       move to next row
