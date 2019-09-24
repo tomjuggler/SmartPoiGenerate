@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 // Switch Case example patterns below:
         switch(counter)
         {
-        case 2:
+        case 0:
             //Right angle triangle from: http://www.techcrashcourse.com/2016/01/print-right-triangle-star-pattern-in-c.html
             rows = 36;
             for(int i = 0; i < rows; i++)
@@ -109,16 +109,16 @@ int main(int argc, char *argv[])
                 }
 //       move to next row
             }
-            counter=0;
+            counter++;
             break;
-        case 1:
+//        case 1:
 //            for(int i = 17; i < 19; i+=2)
 //            {
 //                DrawColouredSquare(i, i, i, 255-i*7, 0, i*7);
 //                DrawColouredCircle(i, i, i, i*7, 0, 255-i*7);
 //            }
-            counter++;
-            break;
+//            counter++;
+//            break;
 //        case 2:
 //            for(int i = 14; i < 16; i+=2)
 //            {
@@ -160,7 +160,7 @@ int main(int argc, char *argv[])
 //            }
 //            counter=0;
 //            break;
-        case 0: //Right andgle Triangle other way
+        case 1: //Right andgle Triangle other way
             rows = 36;
             for(int i = 0; i < rows; i++)
             {
@@ -178,7 +178,7 @@ int main(int argc, char *argv[])
                 }
 //       move to next row
             }
-            counter++;
+            counter=0;
             break;
         default:
             counter = 0;
